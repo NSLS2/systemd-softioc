@@ -8,7 +8,7 @@ function die {
 [ "`id -u`" -eq 0 ] || die "Aborted: this action requires root (sudo) access"
 
 #create a username 'softioc' (used in an IOC's config) if it doesn't exist
-id softioc &> /dev/null || useradd softioc
+id softioc &> /dev/null || useradd -m softioc
 
 
 #copy source files to $INSTALLDIR
